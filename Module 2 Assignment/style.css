@@ -1,0 +1,26 @@
+h1{
+	text-align: center;
+}
+#toBuy{
+	left:25%;
+	position: absolute;
+	display: inline-block;
+	background-color: pink;
+	padding: 1%;
+	width : 300px;
+	height: 300px;
+	clear: none;
+}
+#bought{
+	right: 25%;
+	display: inline-block;
+	position: absolute;
+	background-color: pink;
+	padding: 1%;
+	width : 300px;
+	height: 300px;
+	clear: none;
+}
+h3{
+	text-align: center;
+}

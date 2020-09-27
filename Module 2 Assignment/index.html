@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html ng-app="my-app">
+<head>
+	<meta charset="utf-8">
+	<script type="text/javascript" src="angular.min.js"></script>
+	<script type="text/javascript" src="app.js"></script>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<title>Module 2 Assignment</title>
+</head>
+<body>
+	<h1>Diary Manager</h1>
+	<div id = "main" ng-controller = "my-controller as ctrl">
+		<div id = "toBuy">
+			<h3>To Buy</h3>
+			<ol>
+				<li ng-repeat="item in ctrl.itemsToBuy">
+					{{item.name}} {{item.quantity}}
+					<button ng-click="ctrl.transfer($index)">Bought</button>
+				</li>
+			</ol>
+			<span ng-if = "ctrl.itemsToBuy.length == 0">Everything is bought</span>
+		</div>
+		<div id = "bought">
+			<h3>Already Bought</h3>
+			<ul>
+				<li ng-repeat="item in ctrl.itemsBought">
+					Bought {{item.name}} {{item.quantity}}
+				</li>
+			</ul>
+			<span ng-if = "ctrl.itemsBought.length == 0">Nothing bought yet</span>
+		</div>
+	</div>
+</body>
+</html>
