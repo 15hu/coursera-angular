@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html ng-app="MyApp">
+<head>
+	<meta charset="utf-8">
+	<script type="text/javascript" src="angular.min.js"></script>
+	<script type="text/javascript" src="app.js"></script>
+	<title>Module 3 Assignment</title>
+</head>
+<body>
+	<h1>Module 3 Assignment</h1>
+	<div ng-controller = "MenuController as menu">
+		<input type="text" ng-model="menu.searchText">
+		<button ng-click="menu.search()">Narrow It Down For Me!</button><br>
+		<ul>
+			<li ng-repeat="item in menu.dispMenu">
+				{{item.name}}, {{item.short_name}}, {{item.description}}
+				<button ng-click="menu.remove($index)">Don't want this one!</button>
+			</li>
+		</ul>
+		<span ng-if="menu.dispMenu.length===0">Nothing found</span>
+	</div>
+</body>
+</html>

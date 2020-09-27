@@ -18,7 +18,7 @@
 					<button ng-click="ctrl.transfer($index)">Bought</button>
 				</li>
 			</ol>
-			<span ng-if = "ctrl.itemsToBuy.length == 0">Everything is bought</span>
+			<center><span ng-if = "ctrl.itemsToBuy.length == 0">Everything is bought</span></center>
 		</div>
 		<div id = "bought">
 			<h3>Already Bought</h3>
@@ -27,7 +27,7 @@
 					Bought {{item.name}} {{item.quantity}}
 				</li>
 			</ul>
-			<span ng-if = "ctrl.itemsBought.length == 0">Nothing bought yet</span>
+			<center><span ng-if = "ctrl.itemsBought.length == 0">Nothing bought yet</span></center>
 		</div>
 	</div>
 </body>
